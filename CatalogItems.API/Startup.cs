@@ -40,7 +40,7 @@ namespace CatalogItems.API
                 return new MongoClient(mongoDbSettings.ConnectionString);
             });
 
-            services.AddSingleton<IItemsRepository, MongoDbItemsRepository>();
+            services.AddSingleton<IItemsRepository, InMemItemsRepository>();
 
             services.AddControllers(options =>
             {
